@@ -6,28 +6,32 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('laudo_vidros', '0001_initial'),
+        ("laudo_vidros", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='laudovidros',
-            name='descricao_foto_7',
+            model_name="laudovidros",
+            name="descricao_foto_7",
             field=models.CharField(blank=True, max_length=20),
         ),
         migrations.AddField(
-            model_name='laudovidros',
-            name='foto_7',
-            field=models.ImageField(blank=True, upload_to='photos/%Y/%m/%d/'),
+            model_name="laudovidros",
+            name="foto_7",
+            field=models.ImageField(blank=True, upload_to="photos/%Y/%m/%d/"),
         ),
         migrations.AlterField(
-            model_name='laudovidros',
-            name='declaracao_de_servico',
-            field=models.TextField(blank=True, default='Declaramos que foi realizado o serviço de gravação com os caracteres VIS...', max_length=300),
+            model_name="laudovidros",
+            name="declaracao_de_servico",
+            field=models.TextField(
+                blank=True,
+                default="Declaramos que foi realizado o serviço de gravação com os caracteres VIS...",
+                max_length=300,
+            ),
         ),
         migrations.AlterField(
-            model_name='laudovidros',
-            name='tipo_servico',
-            field=models.CharField(default='Gravação de Vidros', max_length=30),
+            model_name="laudovidros",
+            name="tipo_servico",
+            field=models.CharField(default="Gravação de Vidros", max_length=30),
         ),
     ]

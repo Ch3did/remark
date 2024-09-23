@@ -6,42 +6,42 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('laudo_vidros', '0002_auto_20190717_1216'),
+        ("laudo_vidros", "0002_auto_20190717_1216"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='laudovidros',
-            options={'verbose_name_plural': 'Laudos de  Vidros'},
+            name="laudovidros",
+            options={"verbose_name_plural": "Laudos de  Vidros"},
         ),
         migrations.AlterField(
-            model_name='laudovidros',
-            name='cpf',
+            model_name="laudovidros",
+            name="cpf",
             field=models.CharField(blank=True, max_length=15),
         ),
         migrations.AlterField(
-            model_name='laudovidros',
-            name='estado_veiculo',
+            model_name="laudovidros",
+            name="estado_veiculo",
             field=models.CharField(blank=True, max_length=2),
         ),
         migrations.AlterField(
-            model_name='laudovidros',
-            name='marca',
+            model_name="laudovidros",
+            name="marca",
             field=models.CharField(blank=True, max_length=25),
         ),
         migrations.AlterField(
-            model_name='laudovidros',
-            name='modelo',
+            model_name="laudovidros",
+            name="modelo",
             field=models.CharField(blank=True, max_length=25),
         ),
         migrations.AlterField(
-            model_name='laudovidros',
-            name='num_original',
+            model_name="laudovidros",
+            name="num_original",
             field=models.CharField(blank=True, max_length=25),
         ),
         migrations.AlterField(
-            model_name='laudovidros',
-            name='tipo_servico',
-            field=models.CharField(default='Gravação de Vidros', max_length=25),
+            model_name="laudovidros",
+            name="tipo_servico",
+            field=models.CharField(default="Gravação de Vidros", max_length=25),
         ),
     ]

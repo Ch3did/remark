@@ -6,13 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('laudo_plaqueta', '0005_remove_laudoplaqueta_num_controle'),
+        ("laudo_plaqueta", "0005_remove_laudoplaqueta_num_controle"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='laudoplaqueta',
-            name='declaracao_de_servico',
-            field=models.TextField(blank=True, default='Declaramos que foi realizado o serviço de fabricação/aplicação da Plaqueta de Identificação de Capacidades e Cargas...', max_length=300),
+            model_name="laudoplaqueta",
+            name="declaracao_de_servico",
+            field=models.TextField(
+                blank=True,
+                default="Declaramos que foi realizado o serviço de fabricação/aplicação da Plaqueta de Identificação de Capacidades e Cargas...",
+                max_length=300,
+            ),
         ),
     ]

@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class LaudoEtiquetaConfig(AppConfig):
-    name = 'laudo_etiqueta'
+    name = "laudo_etiqueta"

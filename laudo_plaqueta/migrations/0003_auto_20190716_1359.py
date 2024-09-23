@@ -6,24 +6,24 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('laudo_plaqueta', '0002_remove_laudoplaqueta_num_controle'),
+        ("laudo_plaqueta", "0002_remove_laudoplaqueta_num_controle"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='laudoplaqueta',
-            name='num_controle',
+            model_name="laudoplaqueta",
+            name="num_controle",
             field=models.IntegerField(default=1, verbose_name=602),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='laudoplaqueta',
-            name='ano_modelo',
+            model_name="laudoplaqueta",
+            name="ano_modelo",
             field=models.IntegerField(),
         ),
         migrations.AlterField(
-            model_name='laudoplaqueta',
-            name='ano_veiculo',
+            model_name="laudoplaqueta",
+            name="ano_veiculo",
             field=models.IntegerField(),
         ),
     ]

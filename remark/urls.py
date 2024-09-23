@@ -13,19 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
+
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import include, path
+
 from .views import redirect_admin
 
 urlpatterns = [
     # path('', include('pages.urls')),
-    path('', redirect_admin),
-    path('admin/', admin.site.urls),
-    path('laudo_plaqueta/', include('laudo_plaqueta.urls')),
-    path('laudo_etiqueta/', include('laudo_etiqueta.urls')),
-    path('laudo_chassi/', include('laudo_chassi.urls')),
-    path('laudo_motor/', include('laudo_motor.urls')),
-    path('laudo_vidros/', include('laudo_vidros.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path("", redirect_admin),
+    path("admin/", admin.site.urls),
+    path("laudo_plaqueta/", include("laudo_plaqueta.urls")),
+    path("laudo_etiqueta/", include("laudo_etiqueta.urls")),
+    path("laudo_chassi/", include("laudo_chassi.urls")),
+    path("laudo_motor/", include("laudo_motor.urls")),
+    path("laudo_vidros/", include("laudo_vidros.urls")),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

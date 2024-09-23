@@ -6,47 +6,47 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('laudo_motor', '0002_auto_20190717_1143'),
+        ("laudo_motor", "0002_auto_20190717_1143"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='laudomotor',
-            options={'verbose_name_plural': 'Laudos de Motor'},
+            name="laudomotor",
+            options={"verbose_name_plural": "Laudos de Motor"},
         ),
         migrations.AlterField(
-            model_name='laudomotor',
-            name='cpf',
+            model_name="laudomotor",
+            name="cpf",
             field=models.CharField(blank=True, max_length=15),
         ),
         migrations.AlterField(
-            model_name='laudomotor',
-            name='estado_veiculo',
+            model_name="laudomotor",
+            name="estado_veiculo",
             field=models.CharField(blank=True, max_length=2),
         ),
         migrations.AlterField(
-            model_name='laudomotor',
-            name='marca',
+            model_name="laudomotor",
+            name="marca",
             field=models.CharField(blank=True, max_length=25),
         ),
         migrations.AlterField(
-            model_name='laudomotor',
-            name='modelo',
+            model_name="laudomotor",
+            name="modelo",
             field=models.CharField(blank=True, max_length=25),
         ),
         migrations.AlterField(
-            model_name='laudomotor',
-            name='num_autorizacao',
+            model_name="laudomotor",
+            name="num_autorizacao",
             field=models.CharField(blank=True, max_length=15),
         ),
         migrations.AlterField(
-            model_name='laudomotor',
-            name='num_motor',
+            model_name="laudomotor",
+            name="num_motor",
             field=models.CharField(blank=True, max_length=25),
         ),
         migrations.AlterField(
-            model_name='laudomotor',
-            name='tipo_servico',
-            field=models.CharField(default='Gravação de Motor', max_length=25),
+            model_name="laudomotor",
+            name="tipo_servico",
+            field=models.CharField(default="Gravação de Motor", max_length=25),
         ),
     ]

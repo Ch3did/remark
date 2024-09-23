@@ -6,42 +6,42 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('laudo_plaqueta', '0006_auto_20190716_1549'),
+        ("laudo_plaqueta", "0006_auto_20190716_1549"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='laudoplaqueta',
-            options={'verbose_name_plural': 'Laudos de Plaquetas'},
+            name="laudoplaqueta",
+            options={"verbose_name_plural": "Laudos de Plaquetas"},
         ),
         migrations.AlterField(
-            model_name='laudoplaqueta',
-            name='cpf',
+            model_name="laudoplaqueta",
+            name="cpf",
             field=models.CharField(blank=True, max_length=15),
         ),
         migrations.AlterField(
-            model_name='laudoplaqueta',
-            name='estado_veiculo',
+            model_name="laudoplaqueta",
+            name="estado_veiculo",
             field=models.CharField(blank=True, max_length=2),
         ),
         migrations.AlterField(
-            model_name='laudoplaqueta',
-            name='marca',
+            model_name="laudoplaqueta",
+            name="marca",
             field=models.CharField(blank=True, max_length=25),
         ),
         migrations.AlterField(
-            model_name='laudoplaqueta',
-            name='modelo',
+            model_name="laudoplaqueta",
+            name="modelo",
             field=models.CharField(blank=True, max_length=25),
         ),
         migrations.AlterField(
-            model_name='laudoplaqueta',
-            name='num_autorizacao',
+            model_name="laudoplaqueta",
+            name="num_autorizacao",
             field=models.CharField(blank=True, max_length=15),
         ),
         migrations.AlterField(
-            model_name='laudoplaqueta',
-            name='tipo_servico',
-            field=models.CharField(default='Plaqueta', max_length=25),
+            model_name="laudoplaqueta",
+            name="tipo_servico",
+            field=models.CharField(default="Plaqueta", max_length=25),
         ),
     ]
