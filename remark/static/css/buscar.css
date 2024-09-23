@@ -1,12 +1,12 @@
 :root {
-  --black-color: #333;
-  --light-black-color: #444;
-  --white-color: #fff;
-  --dark-turquoise: #058BCA;
-  --light-steel: #EDEFF0;
-  --brick-red: #BE2B2B;
+  --dark-turquoise: #ffffff;
+  --light-sea: #ffffff;
+  --gray-background: #D3D3D3;
+  --brick-red: #da590f;
   --dark-slate-black: #18232A;
+  --light-steel: #EDEFF0;
   --cinza-claro: #F5F5F5;
+  --cinza-escuro: #DCDCDC;
 }
 
 .search-area {

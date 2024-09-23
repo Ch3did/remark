@@ -1,13 +1,13 @@
- :root {
-   --dark-turquoise: #058BCA;
-   --light-sea: #1774AC;
-   --gray-background: #D3D3D3;
-   --brick-red: #BE2B2B;
-   --dark-slate-black: #18232A;
-   --light-steel: #EDEFF0;
-   --cinza-claro: #F5F5F5;
-   --cinza-escuro: #DCDCDC;
- }
+:root {
+  --dark-turquoise: #ffffff;
+  --light-sea: #ffffff;
+  --gray-background: #D3D3D3;
+  --brick-red: #da590f;
+  --dark-slate-black: #18232A;
+  --light-steel: #EDEFF0;
+  --cinza-claro: #F5F5F5;
+  --cinza-escuro: #DCDCDC;
+}
 
  * {
    font-family: 'Roboto' ,'robotoregular', sans-serif;
@@ -127,7 +127,8 @@
   grid-template-columns: 1fr;
   align-items: center;
   text-align: center;
-}
+  color: #1d1515;
+ }
 
 .foto {
   /* border: 3px #333 solid;  */
@@ -205,8 +206,9 @@
   grid-template-columns: 3fr 4fr 3fr;
 }
 
-.linha-1-1{
+.linha-1-1 {
   position: relative;
+  border: 1px solid black;
 }
 
 .linha-1-1 img{

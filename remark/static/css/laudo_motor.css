@@ -1,8 +1,8 @@
 :root {
-  --dark-turquoise: #058BCA;
-  --light-sea: #1774AC;
+  --dark-turquoise: #ffffff;
+  --light-sea: #ffffff;
   --gray-background: #D3D3D3;
-  --brick-red: #BE2B2B;
+  --brick-red: #da590f;
   --dark-slate-black: #18232A;
   --light-steel: #EDEFF0;
   --cinza-claro: #F5F5F5;
@@ -146,11 +146,12 @@ body {
 }
 
 .item-centro {
- display: grid;
- grid-template-columns: 1fr;
- align-items: center;
- text-align: center;
-}
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  text-align: center;
+  color: #1d1515;
+ }
 
 .foto {
  /* border: 3px #333 solid;  */
@@ -230,6 +231,7 @@ body {
 
 .linha-1-1 {
   position: relative;
+  border: 1px solid black;
 }
 
 .linha-1-1 img{
