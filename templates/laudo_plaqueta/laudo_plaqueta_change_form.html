@@ -1,0 +1,26 @@
+{% extends 'admin/change_form.html' %}
+{% block submit_buttons_bottom %}  
+  {% load i18n admin_urls %}
+  <div class="submit-row">
+  
+  
+<input type="submit" value="{% if can_change %}{% trans 'Save and continue editing' %}{% else %}{% trans 'Save and view' %}{% endif %}" name="_continue">
+  </div>
+
+  
+{% endblock submit_buttons_bottom %}
+
+{% block object-tools-items %}
+  <!-- Lind para impressao -->
+  <a href=""  target="_blank" id="link_imprimir">IMPRIMIR</a>
+
+  <!-- Pega o id a partir da url e atribui ao elemento no html -->
+  <script>      
+    var url_atual = window.location.href;
+    var url_separada = url_atual.split('/')
+    url_separada.pop();
+    url_separada.pop();
+    var id_impressao = url_separada.pop()            
+    document.getElementById('link_imprimir').href="/laudo_plaqueta/"+id_impressao;            
+  </script>
+{% endblock object-tools-items %}
