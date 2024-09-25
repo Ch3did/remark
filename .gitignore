@@ -135,8 +135,3 @@ dmypy.json
 # End of https://www.gitignore.io/api/django
 
 test/
-
-templates/admin/base_site.html:Zone.Identifier'
-error: invalid path 'templates/admin/index.html:Zone.Identifier'
-error: invalid path 'templates/laudo_plaqueta/laudo_plaqueta.html:Zone.Identifier'
-error: invalid path 'templates/laudo_plaqueta/laudo_plaqueta_change_form.html:Zone.Identifier'
