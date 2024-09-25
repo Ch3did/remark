@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{%static '/css/stylesheet.css' %}">
+  <link rel="stylesheet" href="{%static '/css/laudo_plaqueta.css' %}">
+  <link rel="shortcut icon" href="{% static '/img/favicon.ico'  %}" />
+  <title>Document</title>
+</head>
+<body>
+  <div class="folha-a4">
+    <div class="linha-1">
+      <div class="linha-1-1 bet bct"><img src="{%static '/img/logo-remark-croped.jpg' %}" alt="logo remark"></div>
+      <div class="bct linha-1-2">
+        <div class="item-centro titulo-1">
+          <div>LAUDO TÉCNICO</div>
+        </div>
+        <div class="linha-1-2-2"></div>
+      </div>
+      <!-- <div class="be bct bdt linha-1-3 item-centro">
+        <div>Nº 0013/2019</div>
+      </div> -->
+      <div class="bct bdt linha-1-3">
+        <div class="item-centro">
+          <div>Nº {{ laudo.id}}/{{laudo.data_realizacao.year}}</div>
+        </div>
+        <div class="linha-1-3-2"></div>
+      </div>
+    </div>
+    <div class="linha-2 be bct bd item-centro fundo-cinza">
+      <div class="titulo-2">tipo de serviço</div>      
+    </div>
+    <div class=" tipo-campovalor">      
+      <div class="bb  bc tipo-campovalor-1 fundo-cinza-2">        
+        <div class="bd item-centro  titulo-3 be"><div>Tipo de serviço</div></div>
+        <div class="item-centro titulo-3 bd"><div>Data de realização</div></div>
+        <div class="item-centro titulo-3 bd"><div>Data de Emissão</div></div>
+      </div>      
+      <div class="borda-teste tipo-campovalor-1 fundo-branco">        
+        <div class="bd item-centro valor-1 be"><div>{{laudo.tipo_servico}}</div></div>
+        <div class="item-centro valor-1 bd"><div>{{laudo.data_realizacao.date.day}}/{{laudo.data_realizacao.date.month}}/{{laudo.data_realizacao.date.year}} 
+        </div></div>
+        <div class="item-centro valor-1 bd"><div>{{laudo.data_emissao.date.day}}/{{laudo.data_emissao.date.month}}/{{laudo.data_emissao.date.year}}</div></div>
+      </div>
+    </div>
+    <div class="linha-2 be bc bd item-centro fundo-cinza">
+      <div class="titulo-2">Identificação da Autorização</div>      
+    </div>
+    <div class=" linha-3">      
+      <div class="bb  bc linha-3-1 fundo-cinza-2">        
+        <div class="item-centro titulo-3 bd be"><div>Responsável</div></div>
+        <div class="bd item-centro  titulo-3"><div>Número</div></div>
+        <div class="bd item-centro  titulo-3"><div>Cidade/UF</div></div>        
+      </div>      
+      <div class="borda-teste linha-3-2 fundo-branco">
+          <div class="item-centro valor-1 bd be"><div>{{laudo.responsavel}}</div></div>        
+        <div class="bd item-centro valor-1"><div>{{laudo.num_autorizacao}}</div></div>        
+        <div class="bd item-centro valor-1"><div>{{laudo.cidade_autorizacao}}/{{laudo.estado_autorizacao}}</div></div>
+      </div>
+    </div>
+    <div class="item-centro fundo-cinza be bc bd ">
+        <div class="titulo-2">Dados do Veículo</div>
+      </div>
+      <div class="linha-6">
+        <div class="linha-6-x">
+          <div class="bb bc be item-centro fundo-cinza-2 titulo-3"><div>Marca/Modelo</div></div>
+          <div class="borda-teste item-centro be valor-1 "><div>{{laudo.marca}}/{{laudo.modelo}}</div></div>
+        </div>
+        <div class="linha-6-x">
+          <div class="bb bc be item-centro fundo-cinza-2 titulo-3"><div>Ano Fabricação/Modelo</div></div>
+          <div class="borda-teste item-centro be valor-1"><div>{{laudo.ano_veiculo}}/{{laudo.ano_modelo}}</div></div>
+        </div>
+        <div class="borda-teste linha-6-x">
+          <div class="bb bc be item-centro fundo-cinza-2 titulo-3"><div>Placa</div></div>
+          <div class=" item-centro be valor-1"><div>{{laudo.placa}}</div></div>
+        </div>
+        <div class="borda-teste linha-6-x">
+          <div class="bb bc be  bd item-centro fundo-cinza-2 titulo-3"><div>CIDADE/UF</div></div>
+          <div class="borda-teste item-centro  be  bd valor-1"><div>{{laudo.cidade_veiculo}}/{{laudo.estado_veiculo}}</div></div>
+        </div>
+      </div>
+    <div class="borda-linha linha-4 item-centro fundo-cinza">
+      <div class="titulo-2">Dados do Proprietário do Veículo</div>
+    </div>      
+    <div class=" linha-5">
+      <div class="linha-5-x">
+        <div class="bb bc be item-centro fundo-cinza-2 titulo-3"><div>Nome</div></div>
+        <div class="borda-teste be item-centro valor-1"><div>{{laudo.nome}}</div></div>
+      </div>
+      <div class="linha-5-x">
+        <div class="bb bc be bd item-centro fundo-cinza-2 titulo-3"><div>CPF</div></div>
+        <div class="item-centro be bd valor-1"><div>{{laudo.cpf}}</div></div>
+      </div>      
+    </div>    
+    <div class="borda-linha linha-7 fundo-cinza item-centro"><div class="titulo-2">Declaração de Prestação de Serviço</div></div>
+    <div class="linha-8">
+      <div class="be bc bd valor-2 item-centro">
+        <div>{{laudo.declaracao_de_servico}}</div>
+      </div>      
+    </div>
+    <div class="borda-linha linha-9 item-centro  bbt fundo-cinza"><div class="titulo-2">Processo Fotográfico</div></div>
+    <div class="linha-10-2">
+      <div class="bet foto">
+        <img src="{{ laudo.foto_1.url }}" alt="foto aqui">        
+        <div class="legenda-foto">{{laudo.descricao_foto_1}}</div> 
+      </div>
+      <div class="bet foto">
+        <img src="{{ laudo.foto_2.url }}" alt="foto aqui">
+        <div class="legenda-foto">{{laudo.descricao_foto_2}}</div>         
+      </div>
+      {% if laudo.foto_3 %}
+      <div class="bet bdt foto">
+        <img src="{{ laudo.foto_3.url }}" alt="foto aqui"> 
+        <div class="legenda-foto">{{laudo.descricao_foto_3}}</div>       
+      </div>
+      {%endif%}
+    </div>
+    <!-- <div class="linha-11">
+      <div class="bb bc be bd linha11-1 item-centro fundo-cinza titulo-2"><div>Descrição da localização</div></div>
+      <div class="be bd linha11-2 item-centro valor-1"><div>A nova localização encontra-se na longarina</div></div>
+    </div> -->
+    <div class="linha-12">
+      <div class="linha-12-1">
+        <div class="bct be fundo-cinza"></div>
+        <div class="item-centro bb be bc fundo-cinza-2 titulo-3"><div></div></div>
+        <div class="item-centro be bb valor-1"><div></div></div>        
+        <div class="be bb fundo-cinza"></div>
+      </div>
+      <div class="linha-12-2">
+        <div class="bct fundo-cinza"></div>
+        <div class="bb bc item-centro fundo-cinza-2 titulo-4"><div>Assinatura/Carimbo do Responsável</div></div>
+        <div class="borda-teste item-centro bb valor-1"><div></div></div>
+        <div class="bb fundo-cinza"></div>
+      </div>
+      <div class="linha-12-3">
+        <div class="bct bd fundo-cinza"></div>
+        <div class="bb bd bc item-centro fundo-cinza-2 titulo-3"><div></div></div>
+        <div class="bb bd item-centro"><div></div></div>
+        <div class="bd bb fundo-cinza"></div>
+      </div>
+      <!-- <div class="borda-teste linha-12-3">
+        <div class="bb bc be bd item-centro fundo-cinza-2 titulo-3"><div>Dados da Empresa</div></div>
+        <div class="be linha-12-3-2">
+          <div class="borda-teste item-centro bd valor-1"><div>STEFANI MIRANDA POMMERENING 09482411951</div></div>
+          <div class="borda-teste item-centro bd valor-1"><div>Av. Barão do Rio Branco, 575 Centro, Palhoça/SC</div></div>
+          <div class="borda-teste item-centro bd valor-1"><div>(48) 3058-5636 | 99688-8316</div></div>
+          <div class="borda-teste item-centro bd bb valor-1"><div>CNPJ: 30.877.792/0001-48</div></div>
+        </div>      
+      </div> -->      
+    </div>
+    <div class="linha-13 be bb bd item-centro fonte-clara">
+      <div>
+        <div>Não nos responsabilizamos pelo uso indevido das informações ou dos itens disponibilizados para quaisquer que sejam os fins, feito por qualquer pessoa, sendo de inteira responsabilidade desse as eventuais lesões a direito próprio ou de terceiros causadas ou não por uso inadequado.</div>
+      </div>
+    </div>
+    <div class="linha-14 be bb bd item-centro fonte-clara">
+      <div>
+        <div>REMARK | STEFANI MIRANDA POMMERENING 09482411951 CNPJ: 30.877.792/0001-48</div>
+        <div>Av. Barão do Rio Branco, 575 Centro, Palhoça/SC | (48) 3058-5636 | (48) 99688-8316</div>
+      </div>
+    </div>  
+  </div>
+  
+</body>
+</html>

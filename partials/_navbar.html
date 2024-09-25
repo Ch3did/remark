@@ -1,0 +1,14 @@
+<nav id="navbar">
+  <div class="container">
+    <h1 class="logo">REMARK</h1>
+    <ul>
+      <li><a 
+        {% if 'index.html' == request.path %}
+          class="current"  
+        {% endif %}
+        href="index.html">Cadastrar</a></li>
+      <li><a href="buscar.html">Buscar</a></li>
+      <li><a href="relatorios.html">Relatorios</a></li>
+    </ul>
+  </div>
+</nav>
