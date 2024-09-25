@@ -37,7 +37,8 @@ body {
 .ate-4-fotos {
   
   display: grid;
-  grid-template-rows: 1.4fr /*logo */
+  grid-template-rows: 1.3fr /*logo */
+                      0.1fr /*linha laranja*/
                       0.6fr /* titulo 1 */ 
                       0.7fr /* label/valor 1 */ 
                       0.6fr /* titulo 2 */ 
@@ -56,7 +57,8 @@ body {
 .mais-de-4-fotos {
   
  display: grid;
- grid-template-rows: 1.4fr /*logo */
+ grid-template-rows: 1.3fr /*logo */
+                     0.1fr /*linha laranja*/
                      0.6fr /* titulo 1 */ 
                      0.7fr /* label/valor 1 */ 
                      0.6fr /* titulo 2 */ 
@@ -219,6 +221,7 @@ body {
 
 .bct {
  border-top: 2px #333 solid;
+ align-items: end;
 }
 
 /* linhas */
