@@ -36,7 +36,8 @@ body {
 
 .com-decalque {
   display: grid;
-  grid-template-rows: 1.4fr /*logo */
+  grid-template-rows: 1.3fr /*logo */
+                      0.1fr /*linha laranja*/
                       0.6fr /* titulo 1 */ 
                       0.7fr /* label/valor 1 */ 
                       0.6fr /* titulo 2 */ 
