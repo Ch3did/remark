@@ -225,6 +225,10 @@ body {
  border-top: 2px #333 solid;
  align-items: center;
 }
+.bct1{
+    border-top: 2px #333 solid;
+    align-items: end;
+   }
 
 /* linhas */
 .linha-1 {
